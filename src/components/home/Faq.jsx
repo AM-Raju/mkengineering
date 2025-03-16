@@ -5,19 +5,30 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is Next.js?",
+    question: "What is a safety audit, and why do I need it?",
     answer:
-      "Next.js is a React framework that enables server-side rendering and static site generation for React applications.",
+      "A safety audit checks your electrical systems for risks and ensures they meet safety standards, preventing accidents and ensuring compliance.",
   },
   {
-    question: "What is Tailwind CSS?",
+    question: "What does your compliance consultancy cover?",
     answer:
-      "Tailwind CSS is a utility-first CSS framework that allows for rapid UI development with predefined classes.",
+      "We help industries understand and meet safety regulations, guiding them through inspections, documentation, and corrective actions.",
   },
   {
-    question: "How does the FAQ section work?",
+    question:
+      "Do you provide electrical system design and BOQ for new projects?",
     answer:
-      "Click on a question to expand the answer. Clicking again will collapse it, and opening another question will close the previous one.",
+      "Yes, we offer complete electrical system design, drawings, and BOQ to ensure safe, efficient, and cost-effective installations.",
+  },
+  {
+    question: "What is TSV support on LRQA (Elevate)?",
+    answer:
+      "We assist industries in meeting LRQA (Elevate) compliance by providing technical support, assessments, and corrective solutions.",
+  },
+  {
+    question: "Why is annual maintenance important for electrical systems?",
+    answer:
+      "Regular maintenance prevents breakdowns, ensures system efficiency, and extends the lifespan of electrical installations.",
   },
 ];
 

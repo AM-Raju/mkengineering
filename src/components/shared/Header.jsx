@@ -5,16 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import {
-  Menu,
-  X,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram,
-  ChevronDown,
-} from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import SocialIcons from "../ui/SocialIcons";
 
 export default function Header({
@@ -105,29 +96,30 @@ export default function Header({
             <NavItem href="/" label="Home" isActive={pathname === "/"} />
             <NavItem
               href="/about"
-              label="About"
+              label="About Us"
               isActive={pathname === "/about"}
+            />
+
+            <NavItem
+              href="/mission"
+              label="Mission & Vision"
+              isActive={pathname === "/mission"}
             />
             <NavItem
               href="/services"
               label="Services"
-              hasDropdown={true}
+              // hasDropdown={true}
               isActive={pathname.startsWith("/services")}
-              dropdownItems={[
+              /* dropdownItems={[
                 { label: "Web Development", href: "/services/web-development" },
                 { label: "Mobile Apps", href: "/services/mobile-apps" },
                 { label: "UI/UX Design", href: "/services/ui-ux-design" },
-              ]}
+              ]} */
             />
             <NavItem
-              href="/portfolio"
-              label="Portfolio"
-              isActive={pathname === "/portfolio"}
-            />
-            <NavItem
-              href="/blog"
-              label="Blog"
-              isActive={pathname === "/blog"}
+              href="/whyUs"
+              label="Why Us"
+              isActive={pathname === "/whyUs"}
             />
             <NavItem
               href="/contact"

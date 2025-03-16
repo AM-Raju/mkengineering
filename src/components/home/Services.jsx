@@ -1,55 +1,55 @@
-import {
-  BarChart,
-  Briefcase,
-  Code,
-  Layers,
-  LineChart,
-  Settings,
-} from "lucide-react";
+"use client";
+
+import { GiElectricalResistance } from "react-icons/gi";
+import { PiPencilRulerLight } from "react-icons/pi";
+import { BsClipboardCheck } from "react-icons/bs";
+import { GiAbstract063 } from "react-icons/gi";
+import { GiAbstract029 } from "react-icons/gi";
+import { GiLightningSpanner } from "react-icons/gi";
 
 // Create services data
 const services = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Safety Audit",
     description:
-      "Custom web applications built with the latest technologies to meet your business needs.",
-    icon: Code,
+      "We inspect, identify risks, and ensure your electrical systems meet safety standards, preventing hazards before they happen. Safe factories mean a stronger future.",
+    icon: <GiElectricalResistance size={40} />,
   },
   {
     id: 2,
-    title: "UI/UX Design",
+    title: "Compliance Consultancy",
     description:
-      "User-centered design that enhances user experience and drives engagement.",
-    icon: Layers,
+      "Navigating electrical compliance is easy with us. We help you meet industry standards, ensuring your factory runs smoothly without regulatory worries.",
+    icon: <BsClipboardCheck size={40} />,
   },
   {
     id: 3,
-    title: "Digital Marketing",
+    title: "Design, Drawing, and BOQ of Electrical System",
     description:
-      "Strategic marketing solutions to increase your online presence and reach.",
-    icon: LineChart,
+      "Get expert electrical designs with precise drawings and BOQs for a safe, efficient, and cost-effective system that meets your industry needs.",
+    icon: <PiPencilRulerLight size={40} />,
   },
   {
     id: 4,
-    title: "Data Analytics",
+    title: "TSV Support on LRQA(Elevate)",
     description:
-      "Insightful data analysis to help you make informed business decisions.",
-    icon: BarChart,
+      "We guide you through LRQA (Elevate) compliance with expert technical support, ensuring your systems pass with confidence.",
+    icon: <GiAbstract063 size={40} />,
   },
   {
     id: 5,
-    title: "IT Consulting",
+    title: "Annual Maintenance ",
     description:
-      "Expert advice on technology solutions tailored to your business goals.",
-    icon: Settings,
+      "Prevent breakdowns and costly repairs with our yearly maintenance services, keeping your electrical systems in top shape.",
+    icon: <GiAbstract029 size={40} />,
   },
   {
     id: 6,
-    title: "Business Strategy",
+    title: "Lightening Protection System(LPS)",
     description:
-      "Strategic planning and guidance to help your business thrive in a competitive market.",
-    icon: Briefcase,
+      "Protect your factory from lightning strikes with our advanced LPS solutions, keeping your workplace and people safe.",
+    icon: <GiLightningSpanner size={40} />,
   },
 ];
 
@@ -60,8 +60,9 @@ export default function ServiceSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We provide a wide range of services to help your business grow and
-            succeed in the digital world.
+            Ensure safe, efficient, and compliant electrical systems for
+            industries. From audits to design, our expert solutions protect your
+            workplace, prevent risks, and power a safer future.
           </p>
         </div>
 
@@ -71,8 +72,9 @@ export default function ServiceSection() {
               key={service.id}
               className="p-8 h-[300px] flex flex-col items-center border border-transparent transition-all duration-300 ease-in-out hover:border-mk-orange hover:shadow-[0_5px_15px_rgba(0,0,0,0.05)] group"
             >
-              <div className="mb-4 text-center">
-                <service.icon className="w-12 h-12 text-gray-800 transition-transform duration-300 ease-in-out group-hover:scale-110 mx-auto" />
+              <div className="mb-4 text-center group-hover:text-mk-orange group-hover:scale-125 transition-all duration-500">
+                {/* <service.icon className="w-12 h-12 text-gray-800 transition-transform duration-300 ease-in-out group-hover:scale-110 mx-auto" /> */}
+                {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center">
                 {service.title}

@@ -1,11 +1,16 @@
 import { FaProjectDiagram, FaUsers, FaClock, FaHeadset } from "react-icons/fa";
+import { BsFillLightningFill } from "react-icons/bs";
 
 const StatsSection = () => {
   const stats = [
-    { icon: <FaProjectDiagram size={40} />, title: "Projects", number: "120+" },
-    { icon: <FaUsers size={40} />, title: "Clients", number: "80+" },
-    { icon: <FaClock size={40} />, title: "Experience", number: "5+ Years" },
-    { icon: <FaHeadset size={40} />, title: "Support", number: "24/7" },
+    { icon: <FaProjectDiagram size={40} />, title: "Projects", number: "500+" },
+    { icon: <FaUsers size={40} />, title: "Clients", number: "100+" },
+    { icon: <FaClock size={40} />, title: "Experience", number: "6+ Years" },
+    {
+      icon: <BsFillLightningFill size={40} />,
+      title: "LPS Installation",
+      number: "30+",
+    },
   ];
 
   return (
@@ -14,9 +19,9 @@ const StatsSection = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-white shadow-sm shadow-mk-blue/30  hover:shadow-md transition-all duration-300 "
+            className="flex flex-col items-center p-6 bg-white shadow-sm shadow-mk-blue/30  hover:shadow-md transition-all duration-300  group"
           >
-            <div className="text-blue-500 mb-3">{stat.icon}</div>
+            <div className=" mb-3 text-mk-blue">{stat.icon}</div>
             <h3 className="text-lg font-semibold text-gray-700">
               {stat.title}
             </h3>

@@ -60,11 +60,10 @@ const portfolioData = [
 // Filter categories
 const categories = [
   "All",
-  "Web",
-  "Design",
-  "Graphics",
-  "Development",
-  "Photography",
+  "Compliance Consultancy",
+  "Design & Drawing",
+  "LPS",
+  "Testing of Substation Equipment",
 ];
 
 export default function WorkGallery() {
@@ -100,16 +99,13 @@ export default function WorkGallery() {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">
-            Enjoy The Versatility Of{" "}
-            <span className="font-bold text-gray-900">
-              Elizah&apos;s Portfolios
-            </span>
+            Featured Works
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            TheGem is a versatile wp theme with modern creative design. Made as
-            an ultimate toolbox of design elements, styles & features, it helps
-            people to build impressive beautiful high-performance websites of
-            any scope in minutes.
+            Explore our featured works showcasing successful safety audits,
+            compliance solutions, and electrical designs. We power industries
+            with expert solutions, ensuring safety, efficiency, and regulatory
+            excellence.
           </p>
         </div>
 

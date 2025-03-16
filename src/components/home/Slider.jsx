@@ -8,50 +8,34 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "https://i.ibb.co.com/Wpv2rVdb/slide-1.png",
-    title: "Beautiful Landscapes",
+    image: "https://i.ibb.co.com/7NvNdXZg/1.webp",
+    title: "Powering Compliance, Empowering Growth",
     description:
-      "Explore stunning natural landscapes from around the world. Each view offers a unique perspective on our planet's beauty.",
+      "Ensuring RMG factories in Bangladesh meet safety and compliance standards for a more efficient and secure tomorrow.",
     position: "left", // Text position
   },
   {
     id: 2,
-    image: "https://i.ibb.co.com/bM35jT6N/slide-2.png",
-    title: "Urban Architecture",
+    image: "https://i.ibb.co.com/m5WvGjTW/2.webp",
+    title: "Safety First, Success Always",
     description:
-      "Discover remarkable architectural wonders in cities across the globe. From modern skyscrapers to historic buildings.",
+      "We guide your factory through compliance audits and electrical solutions, reducing risks and maximizing productivity.",
     position: "right",
   },
   {
     id: 3,
-    image: "https://i.ibb.co.com/K43cQgF/slide-3.png",
-    title: "Wildlife Photography",
+    image: "https://i.ibb.co.com/xqsffZ6j/3.webp",
+    title: "Future-Proofing Industries, Today",
     description:
-      "Witness the majesty of wildlife in their natural habitats. These rare moments capture the essence of animal behavior.",
+      "Our consultancy ensures your factory meets compliance standards, helping you achieve long-term safety and sustainability.",
     position: "left",
   },
   {
     id: 4,
-    image: "https://i.ibb.co.com/HTfnFG2R/slide-4.png",
-    title: "Cultural Festivals",
+    image: "https://i.ibb.co.com/mCZjXwnC/4.webp",
+    title: "Electrical Safety, Seamless Operations",
     description:
-      "Experience vibrant cultural celebrations that showcase traditions passed down through generations.",
-    position: "right",
-  },
-  {
-    id: 5,
-    image: "https://i.ibb.co.com/4R9n1Bns/slide-5.png",
-    title: "Culinary Delights",
-    description:
-      "Savor the visual feast of culinary masterpieces from different cuisines. Each dish tells a story of heritage and innovation.",
-    position: "left",
-  },
-  {
-    id: 6,
-    image: "https://i.ibb.co.com/ynJsTsJk/slide-6.png",
-    title: "Adventure Sports",
-    description:
-      "Feel the adrenaline rush through extreme sports and adventures. These activities push the boundaries of human capability.",
+      "Expert consultancy to eliminate hazards, enhance energy efficiency, and maintain a compliant, risk-free environment.",
     position: "right",
   },
 ];
@@ -133,7 +117,7 @@ export default function Slider() {
               <div className="absolute top-1/2 w-full -translate-y-1/2">
                 <div className="container mx-auto px-4 md:px-0">
                   <div
-                    className={`md:max-w-md p-6 md:p-8 bg-black/50 backdrop-blur-sm
+                    className={`max-w-sm mx-auto md:max-w-md p-6 md:p-8 bg-mk-blue/50 backdrop-blur-sm
             ${
               slide.position === "left"
                 ? "md:ml-0 md:mr-auto md:text-left"
