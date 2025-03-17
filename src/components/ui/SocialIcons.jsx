@@ -4,7 +4,7 @@ const SocialIcons = () => {
   return (
     <div className="flex space-x-2 text-gray-100 text-lg font-medium">
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/eunuahmed"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center  hover:text-blue-600 transition duration-300"

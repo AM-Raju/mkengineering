@@ -5,39 +5,94 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Md. Khorshed Alam",
     role: "CEO",
-    image: "https://i.ibb.co.com/g4jsGV4/7.jpg",
+    image: "https://i.ibb.co.com/39kz251d/Md-Khorshed-Alam.webp",
   },
   {
-    name: "Jane Smith",
-    role: "CTO",
-    image: "https://i.ibb.co.com/sVgqZj8/5.jpg",
+    name: "Md. Jamal Hossain",
+    role: "COO",
+    image: "",
   },
   {
-    name: "Mike Johnson",
-    role: "Lead Developer",
-    image: "https://i.ibb.co.com/HKZJ8J8/2.jpg",
+    name: "Md. Eunus Ali",
+    role: "Manager (HR & Admin)",
+    image: "https://i.ibb.co.com/hJmpdNNn/Md-Eunus-Ali.webp",
   },
   {
-    name: "Emily Davis",
-    role: "Designer",
-    image: "https://ibb.co.com/1QJy5hH",
+    name: "Md. Sohrab Ali",
+    role: "Manager (Accounts)",
+    image: "https://i.ibb.co.com/20V2yhxK/Md-Sohrab-Ali.webp",
   },
   {
-    name: "Chris Brown",
-    role: "Marketing Head",
-    image: "https://i.ibb.co.com/4Txw4YD/1.jpg",
+    name: "Md. Mehraj Uddin",
+    role: "Manager (Operation)",
+    image: "",
   },
   {
-    name: "Sarah Wilson",
-    role: "HR Manager",
-    image: "https://i.ibb.co.com/Gk5h5MR/3.jpg",
+    name: "Md. Nasir Uddin",
+    role: "Manager (Technical)",
+    image: "",
   },
-  { name: "David White", role: "Sales Lead", image: "/images/team7.jpg" },
-  { name: "Sophia Lee", role: "Support Manager", image: "/images/team8.jpg" },
-  { name: "Robert King", role: "Project Manager", image: "/images/team9.jpg" },
-  { name: "Emma Johnson", role: "Finance Head", image: "/images/team10.jpg" },
+  {
+    name: "Md. Ashikul Haque Sazzad",
+    role: "Design and Safety Engineer",
+    image: "",
+  },
+
+  {
+    name: "Md. Parvej Ahammed",
+    role: "Executive Engineer",
+    image: "https://i.ibb.co.com/6Rb43XPf/Md-Parvej-Ahammed.webp",
+  },
+
+  {
+    name: "Md. Nazmul Haque",
+    role: "Project Engineer",
+    image: "https://i.ibb.co.com/LdyLRxTH/Md-Nazmul-Haque.webp",
+  },
+  {
+    name: "Md. Hasan Babu",
+    role: "Design Engineer",
+    image: "https://i.ibb.co.com/wF807LHs/Md-Hasan-Babu.webp",
+  },
+  {
+    name: "Md. Sakib Ali",
+    role: "Safety Engineer",
+    image: "https://i.ibb.co.com/H8FxbHn/Md-Sakib-Ali.webp",
+  },
+  {
+    name: "Md. Nazmul Hasan",
+    role: "Executive Engineer",
+    image: "https://i.ibb.co.com/jvXGnpcZ/Md-Nazmul-Hasan-Suvo.webp",
+  },
+  {
+    name: "Md. Rakib Hasan",
+    role: "Jr. Engineer",
+    image: "https://i.ibb.co.com/wFqwhw6b/Md-Rakib-Hasan.webp",
+  },
+
+  {
+    name: "Md. Alamin Sarkar",
+    role: "Jr. Executive (Accounts)",
+    image: "https://i.ibb.co.com/d01XRHTW/Md-Alamin-Sarkar.webp",
+  },
+  {
+    name: "Sayed Alam",
+    role: "Marketing Officer",
+    image: "https://i.ibb.co.com/Txtq4Zdy/Sayed-Alam.png",
+  },
+
+  {
+    name: "Md. Naim Islam",
+    role: "Jr. Engineer",
+    image: "https://i.ibb.co.com/MbMTTNp/Md-Naim-Islam.webp",
+  },
+  {
+    name: "Md. Zahid Hasan",
+    role: "Jr. Engineer",
+    image: "https://i.ibb.co.com/bR5TScW6/Md-Zahid-Hasan.webp",
+  },
 ];
 
 export default function Team() {
@@ -95,15 +150,32 @@ export default function Team() {
               .map((member, index) => (
                 <div
                   key={index}
-                  className="w-[300px] h-[400px] border rounded-lg flex flex-col items-center p-4"
+                  className=" border rounded-lg flex flex-col items-center"
                 >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-4/5 object-cover rounded-md"
-                  />
-                  <h3 className="mt-4 text-xl font-semibold">{member.name}</h3>
-                  <p className="text-gray-500">{member.role}</p>
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-[300px] h-[370px] px-4 pt-4 pb-2 object-cover  rounded-md"
+                    />
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-[300px] h-[370px] px-4 pt-4 pb-2 object-cover  text-gray-200"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
+                    </svg>
+                  )}
+                  <h3 className=" text-xl font-semibold">{member.name}</h3>
+                  <p className="mb-2 text-gray-500">{member.role}</p>
                 </div>
               ))}
           </div>

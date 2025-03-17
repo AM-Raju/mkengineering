@@ -3,8 +3,8 @@ import { BsFillLightningFill } from "react-icons/bs";
 
 const StatsSection = () => {
   const stats = [
-    { icon: <FaProjectDiagram size={40} />, title: "Projects", number: "500+" },
-    { icon: <FaUsers size={40} />, title: "Clients", number: "100+" },
+    { icon: <FaProjectDiagram size={40} />, title: "Projects", number: "530+" },
+    { icon: <FaUsers size={40} />, title: "Clients", number: "106+" },
     { icon: <FaClock size={40} />, title: "Experience", number: "6+ Years" },
     {
       icon: <BsFillLightningFill size={40} />,

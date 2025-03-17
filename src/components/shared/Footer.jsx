@@ -19,9 +19,10 @@ export default function Footer() {
             height={50}
             className="mx-auto mb-4"
           />
-          <p className="max-w-md mx-auto text-gray-300">
-            Protecting Metal, Preserving Tomorrow. We ensure high-quality
-            solutions with a commitment to sustainability.
+          <p className="max-w-xl mx-auto text-gray-300">
+            Empowering industries with expert electrical solutions, safety
+            audits, and compliance consultancy. We ensure efficiency,
+            reliability, and regulatory success for a safer, smarter future.
           </p>
         </div>
 
