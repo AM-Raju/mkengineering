@@ -94,7 +94,7 @@ export default function WorkGallery() {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+    <section className=" px-4 md:px-8 lg:px-16 bg-white">
       <div className="container mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-12">

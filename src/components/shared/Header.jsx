@@ -95,9 +95,9 @@ export default function Header({
           <div className="hidden lg:flex items-center space-x-8">
             <NavItem href="/" label="Home" isActive={pathname === "/"} />
             <NavItem
-              href="/about"
+              href="/about-us"
               label="About Us"
-              isActive={pathname === "/about"}
+              isActive={pathname === "/about-us"}
             />
 
             <NavItem

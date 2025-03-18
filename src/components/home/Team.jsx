@@ -15,8 +15,13 @@ const teamMembers = [
     image: "",
   },
   {
+    name: "Parvin Akter",
+    role: "CFO",
+    image: "",
+  },
+  {
     name: "Md. Eunus Ali",
-    role: "Manager (HR & Admin)",
+    role: "Coordinator & HRM",
     image: "https://i.ibb.co.com/hJmpdNNn/Md-Eunus-Ali.webp",
   },
   {
@@ -175,7 +180,7 @@ export default function Team() {
                     </svg>
                   )}
                   <h3 className=" text-xl font-semibold">{member.name}</h3>
-                  <p className="mb-2 text-gray-500">{member.role}</p>
+                  <p className="mb-2 text-gray-500 text-md">{member.role}</p>
                 </div>
               ))}
           </div>
