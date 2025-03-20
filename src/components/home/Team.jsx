@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: "Parvin Akter",
     role: "CFO",
-    image: "",
+    image: "https://i.ibb.co.com/F483qhsY/borkha.png",
   },
   {
     name: "Md. Eunus Ali",

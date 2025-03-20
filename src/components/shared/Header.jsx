@@ -117,9 +117,9 @@ export default function Header({
               ]} */
             />
             <NavItem
-              href="/whyUs"
+              href="/why-us"
               label="Why Us"
-              isActive={pathname === "/whyUs"}
+              isActive={pathname === "/why-us"}
             />
             <NavItem
               href="/contact"

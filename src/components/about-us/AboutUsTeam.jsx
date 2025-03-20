@@ -8,7 +8,12 @@ const teamMembers = [
     image: "https://i.ibb.co/39kz251d/Md-Khorshed-Alam.webp",
   },
   { id: 2, name: "Md. Jamal Hossain", role: "COO", image: "" },
-  { id: 3, name: "Parvin Akter", role: "CFO", image: "" },
+  {
+    id: 3,
+    name: "Parvin Akter",
+    role: "CFO",
+    image: "https://i.ibb.co.com/F483qhsY/borkha.png",
+  },
   {
     id: 4,
     name: "Md. Eunus Ali",
@@ -68,7 +73,7 @@ const teamMembers = [
   {
     id: 15,
     name: "Md. Alamin Sarkar",
-    role: "Jr. Executive (Accounts)",
+    role: "Jr. Engineer",
     image: "https://i.ibb.co/d01XRHTW/Md-Alamin-Sarkar.webp",
   },
   {
@@ -136,7 +141,7 @@ const AboutUsTeam = () => {
       <h2 className="text-center text-3xl font-bold mt-10 mb-6">
         Technical Gems
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4 w-fit mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-4 w-fit mx-auto">
         {technicalGems.map((member, index) => (
           <div
             key={index}
