@@ -66,11 +66,11 @@ export default function ServiceSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.id}
-              className="p-8 h-[300px] flex flex-col items-center border border-transparent transition-all duration-300 ease-in-out hover:border-mk-orange hover:shadow-[0_5px_15px_rgba(0,0,0,0.05)] group"
+              className="p-4 md:p-8 h-[300px] flex flex-col items-center border md:border-transparent transition-all duration-300 ease-in-out  hover:border-mk-orange hover:shadow-[0_5px_15px_rgba(0,0,0,0.05)] group"
             >
               <div className="mb-4 text-center group-hover:text-mk-orange group-hover:scale-125 transition-all duration-500">
                 {/* <service.icon className="w-12 h-12 text-gray-800 transition-transform duration-300 ease-in-out group-hover:scale-110 mx-auto" /> */}
@@ -80,7 +80,7 @@ export default function ServiceSection() {
                 {service.title}
               </h3>
               <div className="w-[calc(100%-10px)] h-[1px] bg-black my-3 mx-[5px] transition-colors duration-300 ease-in-out group-hover:bg-mk-orange"></div>
-              <p className="text-gray-600 text-center flex-grow overflow-y-auto mt-5">
+              <p className="text-gray-600 text-center flex-grow  mt-5">
                 {service.description}
               </p>
             </div>

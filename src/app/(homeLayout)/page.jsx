@@ -7,6 +7,11 @@ import Team from "@/components/home/Team";
 import Testimonial from "@/components/home/Testimonial";
 import WorkGallery from "@/components/home/WorkGallery";
 
+export const metadata = {
+  title: "Home | MK Engineering",
+  description: "",
+};
+
 const homePage = () => {
   return (
     <div>

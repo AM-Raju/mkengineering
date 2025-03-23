@@ -32,6 +32,11 @@ const data = [
   },
 ];
 
+export const metadata = {
+  title: "Why Us | MK Engineering",
+  description: "",
+};
+
 const WhyUs = () => {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -51,9 +56,9 @@ const WhyUs = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="relative bg-white border border-mk-orange p-6 rounded-lg shadow-md"
+            className="relative bg-white border border-mk-orange p-6 rounded-lg shadow-md hover:shadow-lg group"
           >
-            <div className="absolute -top-7 left-7 bg-mk-orange text-white p-3 rounded-lg shadow-lg">
+            <div className="absolute -top-7 left-7 bg-mk-orange text-white p-3 rounded-lg shadow-lg border group-hover:border-mk-orange group-hover:bg-white group-hover:text-mk-orange transition-all duration-1000">
               <item.icon size={30} />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mt-8">

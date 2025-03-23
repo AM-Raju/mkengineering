@@ -4,6 +4,7 @@ const clients = [
   "https://i.ibb.co.com/gFPZFsfD/1888-MILLS-MOA-LOGO-4-C.webp",
   "https://i.ibb.co.com/HL9DXG8W/Amader-Kotha.webp",
   "https://i.ibb.co.com/Q33VMpmw/Apollo.webp",
+  "https://i.ibb.co.com/CsbhgmRg/Beximco.webp",
   "https://i.ibb.co.com/5W0m3PCH/Asian-Appearal.webp",
   "https://i.ibb.co.com/8L7vYLFZ/Aspire-Garments-Ltd.webp",
   "https://i.ibb.co.com/7xZGhcZy/Avery-Denninson.webp",
