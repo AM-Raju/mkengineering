@@ -1,3 +1,4 @@
+import Heading from "@/components/ui/Heading";
 import {
   FaCheckCircle,
   FaIndustry,
@@ -41,9 +42,7 @@ const WhyUs = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-3xl font-bold text-gray-900">
-          Why Choose MK Engineering
-        </h1>
+        <Heading>Why Choose MK Engineering</Heading>
         <p className="mt-4 text-gray-600 max-w-4xl mx-auto">
           At MK Engineering, we take pride in our commitment to excellence,
           innovation, and client satisfaction. Our expertise in electrical,

@@ -1,8 +1,13 @@
 import React from "react";
 
+export const metadata = {
+  title: "Mission & Vision | MK Engineering",
+  description: "",
+};
+
 const MissionPage = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-16">
       {/* Mission Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Image on left */}

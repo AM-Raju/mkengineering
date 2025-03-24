@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Accordion } from "@/components/ui/accordion/Accordion";
 import { AccordionItem } from "@/components/ui/accordion/AccordionItem";
 import Button from "@/components/ui/Button";
+import Heading from "@/components/ui/Heading";
 
 const data = {
   Services: [
     {
       heading: "Design, Drawing (SLD, ELD, LPS) and BOQ of Electrical System",
+      short_heading: "Design and Drawing",
       image: "",
       key_points: [
         "Comprehensive Electrical System Design & Planning",
@@ -29,7 +31,8 @@ const data = {
       ],
     },
     {
-      heading: "TSV (Technical Support Visit)",
+      heading: "Technical Support Visit (TSV)",
+      short_heading: "Technical Support Visit",
       image: "",
       key_points: [
         "Expert support for audit preparation and execution",
@@ -50,7 +53,8 @@ const data = {
       ],
     },
     {
-      heading: "90 days SSV Support",
+      heading: "90 days / SSV Support",
+      short_heading: "90 days / SSV Support",
       image: "",
       key_points: [
         "Ensures electrical systems meet safety standards",
@@ -72,6 +76,7 @@ const data = {
     },
     {
       heading: "Safety Audit",
+      short_heading: "Safety Audit",
       image: "",
       key_points: [
         "Comprehensive evaluation of electrical safety risks",
@@ -93,6 +98,7 @@ const data = {
     },
     {
       heading: "Consultancy for Compliance Service",
+      short_heading: "Compliance Consultancy",
       image: "",
       key_points: [
         "Ensure compliance with national & global standards",
@@ -116,6 +122,7 @@ const data = {
   SupplyAndInstallations: [
     {
       heading: "LPS (Conventional and Advanced)",
+      short_heading: "Lightning Protection System",
       image: "",
       key_points: [
         "Complete LPS service: design, materials, and installation",
@@ -136,7 +143,9 @@ const data = {
       ],
     },
     {
-      heading: "Testing on Electrical Substation Switchgear Equipment",
+      heading:
+        "Testing on Electrical Substation Switchgear Equipment (Transformer, VCB, ACB, ATS, COS, LBS, PFI, MCCB/MCB) service",
+      short_heading: "Testing on Electrical Substation",
       image: "",
       key_points: [
         "Ensures safety and reliability of electrical equipment",
@@ -165,90 +174,138 @@ export default function ServicesPage() {
 
   const currentData = data[activeSection];
 
+  useEffect(() => {
+    document.title = "Services | MK Engineering";
+
+    const updateMetaTag = (name, content) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    // Set description
+    updateMetaTag(
+      "description",
+      "This is a Next.js client page with SEO metadata."
+    );
+
+    // Set keywords
+    updateMetaTag("keywords", "Next.js, SEO, React, Client Component");
+
+    // Open Graph (OG) metadata for social media
+    const updatePropertyMetaTag = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    updatePropertyMetaTag("og:title", "My Client Page");
+    updatePropertyMetaTag(
+      "og:description",
+      "Learn how to use metadata in a Next.js client page."
+    );
+    updatePropertyMetaTag("og:image", "/images/og-image.jpg");
+    updatePropertyMetaTag("og:type", "website");
+  }, []);
+
   return (
-    <div className="container mx-auto p-6">
-      {/* Section Buttons */}
-      <div className="flex gap-4 mb-6 flex-wrap">
-        {Object.keys(data).map((section) => (
-          <Button
-            key={section}
-            onClick={() => {
-              setActiveSection(section);
-              setActiveSubSection("All");
-            }}
-            className={
-              activeSection === section
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200"
-            }
-          >
-            {section.replace(/([A-Z])/g, " $1").trim()}
-          </Button>
-        ))}
-      </div>
-
-      {/* Subsection Buttons */}
-      <div className="flex gap-4 mb-6 flex-wrap">
-        <Button
-          onClick={() => setActiveSubSection("All")}
-          className={
-            activeSubSection === "All"
-              ? "bg-blue-600 text-white"
-              : "bg-gray-200"
-          }
-        >
-          All
-        </Button>
-        {currentData.map((item) => (
-          <Button
-            key={item.heading}
-            onClick={() => setActiveSubSection(item.heading)}
-            className={
-              activeSubSection === item.heading
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200"
-            }
-          >
-            {item.heading}
-          </Button>
-        ))}
-      </div>
-
-      {/* Accordions */}
-      <Accordion>
-        {(activeSubSection === "All"
-          ? currentData
-          : currentData.filter((d) => d.heading === activeSubSection)
-        ).map((item, index) => (
-          <AccordionItem key={item.heading} title={item.heading}>
-            <div
-              className={`flex ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-              } gap-6 p-4 border rounded-lg shadow-md bg-white`}
+    <div>
+      <div className="container mx-auto max-w-6xl p-6">
+        <Heading>Solutions We Provide</Heading>
+        {/* Section Buttons */}
+        <div className="flex mb-6   border border-mk-blue">
+          {Object.keys(data).map((section) => (
+            <button
+              key={section}
+              onClick={() => {
+                setActiveSection(section);
+              }}
+              className={`px-4 py-2 w-1/2 text-2xl ${
+                activeSection === section
+                  ? "bg-mk-blue text-white "
+                  : "bg-gray-200"
+              } `}
             >
-              <div className="w-full sm:w-1/3 bg-gray-300 flex items-center justify-center h-40">
-                {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.heading}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  "No Image"
-                )}
-              </div>
-              <div className="w-full sm:w-2/3">
-                <h3 className="text-lg font-bold mb-2">{item.heading}</h3>
-                <ul className="list-disc pl-5 space-y-1">
-                  {item.key_points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </AccordionItem>
-        ))}
-      </Accordion>
+              {section.replace(/([A-Z])/g, " $1").trim()}
+            </button>
+          ))}
+        </div>
+
+        <div className="border border-mk-blue p-6">
+          {/* Subsection Buttons */}
+          <div className="flex gap-4 mb-6 flex-wrap  ">
+            <Button
+              onClick={() => setActiveSubSection("All")}
+              className={
+                activeSubSection === "All"
+                  ? "bg-mk-orange text-white"
+                  : "bg-gray-200"
+              }
+            >
+              All
+            </Button>
+            {currentData.map((item) => (
+              <Button
+                key={item.short_heading}
+                onClick={() => setActiveSubSection(item.short_heading)}
+                className={
+                  activeSubSection === item.short_heading
+                    ? "bg-mk-orange text-white"
+                    : "bg-gray-200"
+                }
+              >
+                {item.short_heading} {/* // Apply switch case here */}
+              </Button>
+            ))}
+          </div>
+
+          {/* Accordions */}
+          <Accordion>
+            {(activeSubSection === "All"
+              ? currentData
+              : currentData.filter((d) => d.short_heading === activeSubSection)
+            ).map((item, index) => (
+              <AccordionItem key={item.heading} title={item.heading}>
+                <div
+                  className={`flex ${
+                    index % 2 === 0
+                      ? "flex-col md:flex-row"
+                      : "flex-col md:flex-row-reverse"
+                  } gap-8 p-6 border border-mk-blue shadow-md bg-white`}
+                >
+                  <div className="w-full md:w-1/2 bg-gray-300 flex items-center justify-center ">
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.heading}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      "No Image"
+                    )}
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h3 className="text-xl font-bold mb-2">{item.heading}</h3>
+                    <ul className="list-disc pl-5 space-y-1">
+                      {item.key_points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
     </div>
   );
 }

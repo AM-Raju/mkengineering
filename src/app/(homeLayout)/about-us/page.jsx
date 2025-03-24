@@ -1,12 +1,17 @@
 import AboutUsTeam from "@/components/about-us/AboutUsTeam";
-import React from "react";
+import Heading from "@/components/ui/Heading";
+
+export const metadata = {
+  title: "About Us | MK Engineering",
+  description: "",
+};
 
 const AboutUsPage = () => {
   return (
     <div>
       <div className="container mx-auto px-4 py-10 max-w-5xl">
         {/* Main Heading */}
-        <h1 className="text-3xl font-bold text-center mb-8">About Us</h1>
+        <Heading>About Us</Heading>
 
         {/* Single Column Layout */}
         <div className="grid grid-cols-1 gap-8">
