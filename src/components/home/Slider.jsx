@@ -117,17 +117,18 @@ export default function Slider() {
               <div className="absolute top-1/2 w-full -translate-y-1/2">
                 <div className="container mx-auto px-4 md:px-0">
                   <div
-                    className={`max-w-sm mx-auto md:max-w-md p-6 md:p-8 bg-mk-blue/50 backdrop-blur-sm
+                    className={`max-w-sm mx-auto  md:max-w-md p-6 md:p-8 bg-mk-blue/50 backdrop-blur-sm
             ${
               slide.position === "left"
-                ? "md:ml-0 md:mr-auto md:text-left"
-                : "md:mr-0 md:ml-auto md:text-right"
+                ? " md:mr-auto md:ml-20 xl:ml-24 md:text-left"
+                : " md:ml-auto md:mr-20 xl:mr-24  md:text-right"
             }
             text-center md:text-inherit`}
                   >
                     <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
                       {slide.title}
                     </h2>
+
                     <p className="text-white/90 text-sm md:text-base">
                       {slide.description}
                     </p>
@@ -144,7 +145,7 @@ export default function Slider() {
             prevSlide();
             handleInteraction();
           }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 rounded-full p-2 shadow-md transition-all"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 rounded-full p-2 shadow-md transition-all hidden sm:block"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
@@ -155,7 +156,7 @@ export default function Slider() {
             nextSlide();
             handleInteraction();
           }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 rounded-full p-2 shadow-md transition-all"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 rounded-full p-2 shadow-md transition-all hidden sm:block"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6 text-white" />
