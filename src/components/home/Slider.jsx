@@ -120,8 +120,8 @@ export default function Slider() {
                     className={`max-w-sm mx-auto  md:max-w-md p-6 md:p-8 bg-mk-blue/50 backdrop-blur-sm
             ${
               slide.position === "left"
-                ? " md:mr-auto md:ml-20 xl:ml-24 md:text-left"
-                : " md:ml-auto md:mr-20 xl:mr-24  md:text-right"
+                ? " md:mr-auto md:ml-20 xl:ml-24 md:text-left 2xl:ml-0"
+                : " md:ml-auto md:mr-20 xl:mr-24  md:text-right 2xl:mr-0 "
             }
             text-center md:text-inherit`}
                   >

@@ -11,7 +11,7 @@ const data = {
     {
       heading: "Design, Drawing (SLD, ELD, LPS) and BOQ of Electrical System",
       short_heading: "Design and Drawing",
-      image: "",
+      image: "https://i.ibb.co.com/sJvNGb5R/Design.webp",
       key_points: [
         "Comprehensive Electrical System Design & Planning",
         "Accurate Single Line Diagram (SLD) Creation",
@@ -32,8 +32,8 @@ const data = {
     },
     {
       heading: "Technical Support Visit (TSV)",
-      short_heading: "Technical Support Visit",
-      image: "",
+      short_heading: "TSV",
+      image: "https://i.ibb.co.com/Psd2fXLk/TSV.webp",
       key_points: [
         "Expert support for audit preparation and execution",
         "Ensures compliance with safety regulations and standards",
@@ -55,7 +55,7 @@ const data = {
     {
       heading: "90 days / SSV Support",
       short_heading: "90 days / SSV Support",
-      image: "",
+      image: "https://i.ibb.co.com/Q3CQSbc2/90days.webp",
       key_points: [
         "Ensures electrical systems meet safety standards",
         "Prevents equipment failures with regular checks",
@@ -77,7 +77,7 @@ const data = {
     {
       heading: "Safety Audit",
       short_heading: "Safety Audit",
-      image: "",
+      image: "https://i.ibb.co.com/7tBSP3Ng/Safety-Audit.webp",
       key_points: [
         "Comprehensive evaluation of electrical safety risks",
         "Identifies fire hazards and short circuits",
@@ -99,7 +99,7 @@ const data = {
     {
       heading: "Consultancy for Compliance Service",
       short_heading: "Compliance Consultancy",
-      image: "",
+      image: "https://i.ibb.co.com/xKcs4jJc/consultancy.webp",
       key_points: [
         "Ensure compliance with national & global standards",
         "100% cap close from RSC and Nirapon (LRQA)",
@@ -118,12 +118,35 @@ const data = {
         "Enhance workplace safety & business reputation",
       ],
     },
+    {
+      heading:
+        "Testing on Electrical Substation Switchgear Equipment (Transformer, VCB, ACB, ATS, COS, LBS, PFI, MCCB/MCB) service",
+      short_heading: "Testing",
+      image: "https://i.ibb.co.com/6Ry5NckC/Testing.webp",
+      key_points: [
+        "Ensures safety and reliability of electrical equipment",
+        "Prevents equipment failures with thorough testing",
+        "Tests critical components like transformers and breakers",
+        "Monitors insulation health to prevent leakage",
+        "Verifies proper voltage change and distribution",
+        "Evaluates circuit breakers for proper functioning",
+        "Assesses contact resistance to prevent overheating",
+        "Ensures breakers operate within safe timing limits",
+        "Validates capacitor function for energy efficiency",
+        "Checks dielectric strength for high voltage durability",
+        "Performs earth resistance tests for safety",
+        "Ensures substation equipment operates at optimal levels",
+        "Confirms functional performance of relays and switches",
+        "Supports compliance with safety and performance standards",
+        "Improves system reliability with regular equipment testing",
+      ],
+    },
   ], // Your services data
   SupplyAndInstallations: [
     {
       heading: "LPS (Conventional and Advanced)",
       short_heading: "Lightning Protection System",
-      image: "",
+      image: "https://i.ibb.co.com/hFxZvwKr/LPS.webp",
       key_points: [
         "Complete LPS service: design, materials, and installation",
         "Protection from fire, surges, and electrical failures",
@@ -143,26 +166,48 @@ const data = {
       ],
     },
     {
-      heading:
-        "Testing on Electrical Substation Switchgear Equipment (Transformer, VCB, ACB, ATS, COS, LBS, PFI, MCCB/MCB) service",
-      short_heading: "Testing on Electrical Substation",
-      image: "",
+      heading: "Generator Supply and Installations",
+      short_heading: "Generator Supply and Installations",
+      image: "https://i.ibb.co.com/RdcvByn/Generator.webp",
       key_points: [
-        "Ensures safety and reliability of electrical equipment",
-        "Prevents equipment failures with thorough testing",
-        "Tests critical components like transformers and breakers",
-        "Monitors insulation health to prevent leakage",
-        "Verifies proper voltage change and distribution",
-        "Evaluates circuit breakers for proper functioning",
-        "Assesses contact resistance to prevent overheating",
-        "Ensures breakers operate within safe timing limits",
-        "Validates capacitor function for energy efficiency",
-        "Checks dielectric strength for high voltage durability",
-        "Performs earth resistance tests for safety",
-        "Ensures substation equipment operates at optimal levels",
-        "Confirms functional performance of relays and switches",
-        "Supports compliance with safety and performance standards",
-        "Improves system reliability with regular equipment testing",
+        "Reliable generator supply from trusted global brands",
+        "Full installation from start to switch-on",
+        "Load assessment to choose perfect capacity",
+        "Diesel and gas generators available on demand",
+        "Automatic transfer switch (ATS) system setup",
+        "Silent generators for noise-sensitive environments",
+        "Skilled installation by certified electrical engineers",
+        "Wiring, earthing, and load balancing included",
+        "Fuel system setup with safety measures",
+        "Generator room layout and ventilation planning",
+        "Test run ensures seamless power backup",
+        "Post-installation training for operational safety",
+        "Compliance with BNBC and NFPA standards",
+        "Warranty-backed machines with maintenance options",
+        "On-call support after installation is complete",
+      ],
+    },
+    {
+      heading:
+        "Substation Equipment Supply and Installations (Transformer, PFI, LT, HT, ACB, VCB, MDB, DBs)",
+      short_heading: "Substation Equipment Supply",
+      image: "https://i.ibb.co.com/gbXY7FHj/Substation.webp",
+      key_points: [
+        "Complete substation setup from start to finish",
+        "Supply and install high-quality transformers",
+        "PFI panel installation for power factor improvement",
+        "LT and HT panels with safety assurance",
+        "ACB and VCB setup for overload protection",
+        "MDB and DB installation with proper segregation",
+        "Equipment from trusted, certified global brands",
+        "Load analysis to select suitable equipment",
+        "Busbar trunking and proper cable termination included",
+        "Earthing and lightning protection fully ensured",
+        "System tested to meet safety standards",
+        "Single-point solution for substation infrastructure",
+        "Professional commissioning with test reports provided",
+        "Follows BNBC, NFPA, and IEC codes",
+        "Post-installation maintenance and emergency support available",
       ],
     },
   ], // Your supply and installation data
@@ -227,6 +272,7 @@ export default function ServicesPage() {
               key={section}
               onClick={() => {
                 setActiveSection(section);
+                setActiveSubSection("All");
               }}
               className={`px-4 py-2 w-1/2 text-2xl ${
                 activeSection === section
@@ -277,11 +323,11 @@ export default function ServicesPage() {
                 <div
                   className={`flex ${
                     index % 2 === 0
-                      ? "flex-col md:flex-row"
-                      : "flex-col md:flex-row-reverse"
+                      ? "flex-col lg:flex-row"
+                      : "flex-col lg:flex-row-reverse"
                   } gap-8 p-6 border border-mk-blue shadow-md bg-white`}
                 >
-                  <div className="w-full md:w-1/2 bg-gray-300 flex items-center justify-center ">
+                  <div className="w-full lg:w-1/2 bg-gray-300 flex items-center justify-center ">
                     {item.image ? (
                       <img
                         src={item.image}
@@ -292,7 +338,7 @@ export default function ServicesPage() {
                       "No Image"
                     )}
                   </div>
-                  <div className="w-full md:w-1/2">
+                  <div className="w-full lg:w-1/2">
                     <h3 className="text-xl font-bold mb-2">{item.heading}</h3>
                     <ul className="list-disc pl-5 space-y-1">
                       {item.key_points.map((point, i) => (

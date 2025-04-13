@@ -13,7 +13,7 @@ const MissionPage = () => {
         {/* Image on left */}
         <div className="flex justify-center items-center">
           <img
-            src="https://i.ibb.co.com/Wvk8y8Nw/Mission.webp" // Replace with your actual image path
+            src="https://i.ibb.co.com/gLNvy5Yd/Mission.webp" // Replace with your actual image path
             alt="Mission Image"
             className="rounded-lg shadow-lg w-full h-auto"
           />
@@ -50,7 +50,7 @@ const MissionPage = () => {
         {/* Image on right */}
         <div className="flex justify-center items-center lg:hidden">
           <img
-            src="https://i.ibb.co.com/8LGfMg3M/Vision.webp" // Replace with your actual image path
+            src="https://i.ibb.co.com/SwxwQY1S/Vision.webp" // Replace with your actual image path
             alt="Vision Image"
             className="rounded-lg shadow-lg w-full h-auto"
           />

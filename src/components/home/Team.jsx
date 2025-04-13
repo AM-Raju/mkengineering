@@ -12,12 +12,12 @@ const teamMembers = [
   {
     name: "Md. Jamal Hossain",
     role: "COO",
-    image: "",
+    image: "https://i.ibb.co.com/XxsfqGQX/Jamal-Vy.webp",
   },
   {
     name: "Parvin Akter",
     role: "CFO",
-    image: "https://i.ibb.co.com/F483qhsY/borkha.png",
+    image: "https://i.ibb.co.com/84xBRK37/borkha.webp",
   },
   {
     name: "Md. Eunus Ali",
@@ -25,50 +25,65 @@ const teamMembers = [
     image: "https://i.ibb.co.com/hJmpdNNn/Md-Eunus-Ali.webp",
   },
   {
+    name: "Md. Motalleb Hossain",
+    role: "CSO",
+    image: "",
+  },
+  {
+    name: "Mst. Poly Akter",
+    role: "Asst. Manager (Business Development)",
+    image: "https://i.ibb.co.com/84xBRK37/borkha.webp",
+  },
+  {
     name: "Md. Sohrab Ali",
     role: "Manager (Accounts)",
     image: "https://i.ibb.co.com/20V2yhxK/Md-Sohrab-Ali.webp",
   },
   {
-    name: "Md. Mehraj Uddin",
-    role: "Manager (Operation)",
+    name: "Abdullah Al Mamun",
+    role: "Safety Engineer",
     image: "",
+  },
+  {
+    name: "Md. Mehraj Uddin",
+    role: "Engineer",
+    image: "https://i.ibb.co.com/nMhgL6N7/Mehraj-Uddin.webp",
   },
   {
     name: "Md. Nasir Uddin",
-    role: "Manager (Technical)",
-    image: "",
+    role: "Engineer",
+    image: "https://i.ibb.co.com/GQWMRDJy/Nasir-Uddin.webp",
   },
   {
     name: "Md. Ashikul Haque Sazzad",
-    role: "Design and Safety Engineer",
-    image: "",
+    role: "Engineer",
+    image: "https://i.ibb.co.com/tMtRbXHr/Ashiqul-Haque-Sazzad.webp",
   },
 
   {
     name: "Md. Parvej Ahammed",
-    role: "Executive Engineer",
+    role: "Asst. Engineer",
     image: "https://i.ibb.co.com/6Rb43XPf/Md-Parvej-Ahammed.webp",
   },
 
   {
     name: "Md. Nazmul Haque",
-    role: "Project Engineer",
+    role: "Asst. Engineer",
     image: "https://i.ibb.co.com/LdyLRxTH/Md-Nazmul-Haque.webp",
   },
   {
     name: "Md. Hasan Babu",
-    role: "Design Engineer",
+    role: "Asst. Engineer",
     image: "https://i.ibb.co.com/wF807LHs/Md-Hasan-Babu.webp",
   },
   {
     name: "Md. Sakib Ali",
-    role: "Safety Engineer",
+    role: "Jr. Engineer",
     image: "https://i.ibb.co.com/H8FxbHn/Md-Sakib-Ali.webp",
   },
   {
     name: "Md. Nazmul Hasan",
-    role: "Executive Engineer",
+    role: "Asst. Engineer",
     image: "https://i.ibb.co.com/jvXGnpcZ/Md-Nazmul-Hasan-Suvo.webp",
   },
   {
@@ -79,12 +94,12 @@ const teamMembers = [
 
   {
     name: "Md. Alamin Sarkar",
-    role: "Jr. Executive (Accounts)",
+    role: "Jr. Engineer",
     image: "https://i.ibb.co.com/d01XRHTW/Md-Alamin-Sarkar.webp",
   },
   {
     name: "Sayed Alam",
-    role: "Marketing Officer",
+    role: "Asst. Engineer",
     image: "https://i.ibb.co.com/Txtq4Zdy/Sayed-Alam.png",
   },
 
@@ -150,39 +165,42 @@ export default function Team() {
         <div className="overflow-hidden max-w-full">
           {/* <div className="flex gap-10 items-center transition-transform duration-500 "> */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 items-center transition-transform duration-500 ">
-            {teamMembers
-              .slice(startIndex, startIndex + visibleCards)
-              .map((member, index) => (
-                <div
-                  key={index}
-                  className=" border rounded-lg flex flex-col items-center"
-                >
-                  {member.image ? (
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-[300px] h-[370px] px-4 pt-4 pb-2 object-cover  rounded-md"
-                    />
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-[300px] h-[370px] px-4 pt-4 pb-2 object-cover  text-gray-200"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                      />
-                    </svg>
-                  )}
-                  <h3 className=" text-xl font-semibold">{member.name}</h3>
-                  <p className="mb-2 text-gray-500 text-md">{member.role}</p>
-                </div>
-              ))}
+            {teamMembers.slice(startIndex, startIndex + visibleCards).map(
+              (member, index) =>
+                member && (
+                  <div
+                    key={index}
+                    className=" border rounded-lg flex flex-col items-center p-4 "
+                  >
+                    {member.image ? (
+                      <div className="overflow-hidden  mb-2">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-[300px] h-[370px]  object-cover  rounded-md hover:scale-105 transition-all duration-700 "
+                        />
+                      </div>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-[300px] h-[370px] px-4 pt-4 pb-2 object-cover  text-gray-200"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                        />
+                      </svg>
+                    )}
+                    <h3 className=" text-xl font-semibold">{member.name}</h3>
+                    <p className=" text-gray-500 text-md">{member.role}</p>
+                  </div>
+                )
+            )}
           </div>
         </div>
 

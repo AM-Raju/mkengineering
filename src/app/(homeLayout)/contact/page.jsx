@@ -16,7 +16,7 @@ const ContactPage = () => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
               style={{
                 backgroundImage:
-                  "url('https://i.ibb.co.com/6RWsn0BF/testimonial-bg.png')",
+                  "url('https://i.ibb.co.com/x033W2N/testimonial-bg.webp')",
               }}
             ></div>
             <h1 className="relative text-mk-blue text-3xl md:text-5xl font-bold z-10">

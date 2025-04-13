@@ -49,7 +49,7 @@ export default function Testimonial() {
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
           backgroundImage:
-            "url('https://i.ibb.co.com/6RWsn0BF/testimonial-bg.png')",
+            "url('https://i.ibb.co.com/x033W2N/testimonial-bg.webp')",
         }}
       ></div>
 

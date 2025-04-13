@@ -11,8 +11,8 @@ import SocialIcons from "../ui/SocialIcons";
 export default function Header({
   logoText = "MK Engineering",
   logoImage = "/logo.png",
-  phoneNumber = "+1 (555) 123-4567",
-  email = "info@example.com",
+  phoneNumber = "+880 1718-595979",
+  email = "info@mkengineeringbd.com",
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
