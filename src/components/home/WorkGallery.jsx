@@ -8,51 +8,51 @@ import { motion, AnimatePresence } from "framer-motion";
 const portfolioData = [
   {
     id: 1,
-    title: "Business Cards",
-    category: ["Design", "Graphics"],
-    image: "https://i.ibb.co.com/8D9mR0Zm/Design.png",
+    title: "Design and Drawing",
+    category: ["Design & Drawing"],
+    image: "https://i.ibb.co.com/20dPT642/Design.webp",
     size: "small",
   },
   {
     id: 2,
-    title: "Fashion Portrait",
-    category: ["Photography", "Graphics"],
-    image: "https://i.ibb.co.com/8D9mR0Zm/Design.png",
+    title: "Technical Support Visit",
+    category: ["TSV"],
+    image: "https://i.ibb.co.com/twNYHcRw/TSV.webp",
     size: "small",
   },
   {
     id: 3,
-    title: "Tomato Soup",
-    category: ["Photography", "Food"],
-    image: "https://i.ibb.co.com/35xsXHZK/Boring.png",
+    title: "Testing on Substation Equipment",
+    category: ["Testing"],
+    image: "https://i.ibb.co.com/DPjQs5rX/Substation-Equipment.webp",
     size: "medium",
   },
   {
     id: 4,
-    title: "Menu Design",
-    category: ["Design", "Graphics"],
-    image: "https://i.ibb.co.com/8D9mR0Zm/Design.png",
+    title: "Single Line Diagram (SLD)",
+    category: ["Design and Drawing"],
+    image: "https://i.ibb.co.com/60ChD1QN/Design2.webp",
     size: "small",
   },
   {
     id: 5,
-    title: "Black Book",
-    category: ["Photography", "Design"],
-    image: "https://i.ibb.co.com/35xsXHZK/Boring.png",
+    title: "Advanced LPS",
+    category: ["Supply and Installations"],
+    image: "https://i.ibb.co.com/p6dC50G1/LPS.webp",
     size: "medium",
   },
   {
     id: 6,
-    title: "Headphones",
-    category: ["Photography", "Development"],
-    image: "https://i.ibb.co.com/8D9mR0Zm/Design.png",
+    title: "Electrical Equipment Testing",
+    category: ["Testing"],
+    image: "https://i.ibb.co.com/CKzdv1B8/Testing.webp",
     size: "small",
   },
   {
     id: 7,
-    title: "Packaging Design",
-    category: ["Design", "Graphics"],
-    image: "https://i.ibb.co.com/8D9mR0Zm/Design.png",
+    title: "Electrical Layout Drawing",
+    category: ["Design & Drawing"],
+    image: "https://i.ibb.co.com/chv9D6QB/Design3.webp",
     size: "small",
   },
 ];
@@ -60,10 +60,10 @@ const portfolioData = [
 // Filter categories
 const categories = [
   "All",
-  "Compliance Consultancy",
+  "TSV",
   "Design & Drawing",
-  "LPS",
-  "Testing of Substation Equipment",
+  "Supply and Installations",
+  "Testing",
 ];
 
 export default function WorkGallery() {
@@ -99,7 +99,7 @@ export default function WorkGallery() {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">
-            Featured Works
+            Work Gallery
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Explore our featured works showcasing successful safety audits,
@@ -149,18 +149,18 @@ export default function WorkGallery() {
                   <div className="p-0 relative">
                     <div
                       className={`relative w-full ${
-                        item.title === "Black Book" ||
-                        item.title === "Tomato Soup"
-                          ? "h-full min-h-[600px]"
+                        item.title === "Advanced LPS" ||
+                        item.title === "Testing on Substation Equipment"
+                          ? "max-h-[600px]"
                           : "h-64 md:h-72"
                       }`}
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className={`object-cover transition-transform duration-500 group-hover:scale-110 ${
-                          item.title === "Black Book" ||
-                          item.title === "Tomato Soup"
+                        className={`object-cover w-full transition-transform duration-500 group-hover:scale-110 ${
+                          item.title === "Testing on Substation Equipment" ||
+                          item.title === "Advanced LPS"
                             ? "h-full min-h-[600px]"
                             : "h-64 md:h-72"
                         }`}
